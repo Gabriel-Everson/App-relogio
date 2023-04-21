@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    font-size: "Poppins", sans serif;
+    margin: 0px;
+}
+:root{
+    --bg-color: rgb(7, 3, 31);
+    --third-color:rgb(19, 10, 59);
+    --secund-color:rgb(97, 47, 174);
+    --quart-color:rgb(134, 80, 214);
+    --hover-secund-color:rgb(61, 28, 111);
+    --transition:rgba(255, 255, 255, 0.207);
+    --transition2:rgba(165, 80, 234, 0.207);
+}
+body{
+    background: var(--bg-color);
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes border-color{
+    0% {
+        color: var(--quart-color);
+        box-shadow: -1px -1px 10px 5px var(--quart-color);
+    }
+    25%{
+        color: aqua;
+        box-shadow: -1px -1px 10px 5px aqua;
+    }
+    50% {
+        color: var(--secund-color);
+        box-shadow: -1px -1px 10px 5px var(--secund-color);
+    }
+    75% {
+        color: var(--hover-secund-color);
+        box-shadow: -1px -1px 10px 5px var(--hover-secund-color);
+    }
+    100% {
+        color: var(--quart-color);
+        box-shadow: -1px -1px 10px 5px var(--quart-color);
+    }
+}
+@keyframes titulo-color{
+    0% {
+        color: var(--quart-color);
+    }
+    25%{
+        color: aqua;
+    }
+    50% {
+        color: var(--secund-color);
+    }
+    75% {
+        color: var(--hover-secund-color);
+    }
+    100% {
+        color: var(--quart-color);
+    }
+}
+.box-relogio{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 500px;
+    align-items: center;
+    text-align: center;
+    border-radius: 1000px;
+    justify-content: center;
+    animation: 5s border-color infinite;
+}
+.relogio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    transition: 1s;
+    cursor: pointer;
+}
+.horas{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-size: 80px;
+    animation: 5s titulo-color infinite;
+}
+.relogio:hover{
+    transform: scale(1.1);
+}
+.calendario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin-top: 5%;
+    transition: 1s;
+    cursor: pointer;
+}
+.calendario:hover{
+    transform: scale(1.1)
+}
+#data{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-size: 25px;
+    animation: 5s titulo-color infinite;
+
+}
